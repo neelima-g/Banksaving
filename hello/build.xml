@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="webbanking" default="test" basedir=".">
+	<property name="source.dir" value="src"/>
+	<property name="web.dir" value="WebContent"/>
+	<property name="target.dir" value="target"/>
+	<target name ="test">
+<mkdir dir="${target.dir}"/>
+		<javac srcdir="${source.dir}" destdir="${target.dir}"/>
+</target>
+</project>

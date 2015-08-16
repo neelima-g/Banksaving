@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="webservices" default="test" basedir=".">
+	
+	<property environment="env"/>
+	<property name="source.dir" value="src"/>
+	<property name="web.dir" value="WebContent"/>
+	<property name="target.dir" value="target"/>
+	
+	<path id="compile_classpath">
+	<pathelement path="${env.CLASSPATH}"/>
+		<pathelement path="${java.class.path}"/>
+		<fileset dir="${web.dir}">
+		<include name="**/*.jar"/>
+			</fileset>
+	</path>
+	
+	<target name ="test">
+		<mkdir dir="${target.dir}"/>
+		<javac srcdir="${source.dir}" destdir="${target.dir}" classpathref="compile_classpath"/>
+</target>
+	
+</project>
